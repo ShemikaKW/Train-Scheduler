@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    
+</head>
+<body>
+    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">It's Train Time</h1>
+          <p class="lead">View the schedule. Add a train.</p>
+        </div>
+      </div>
+  
+      <!--Train Schedule-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Current Train Schedule</h2>
+            <table class="table table-hover" id="train-table">
+              <thead>
+                <tr>
+                  <td class="table-heading">Train Name</th>
+                  <td class="table-heading">Destination</th>
+                  <td class="table-heading">Frequency</th>
+                  <td class="table-heading">Next Arrival</th>
+                  <td class="table-heading">Minutes away</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <!--New table info will be added here-->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!--Form to add train-->
+          <div class="col-md-2">
+            <div class="card" id="add-train-card" style="width: 16rem;">
+                <div class="card-body">
+                  <h2>Add a train</h2>
+                  <form>
+                    <div class="form-group">
+                      <label for="name-input">Train name</label>
+                      <input type="text" class="form-control-sm" id="name-input">
+                    </div>
+                    <div class="form-group">
+                      <label for="destination-input">Destination</label>
+                      <input type="text" class="form-control-sm" id="destination-input">
+                    </div>
+                    <div class="form-group">
+                      <label for="first-train-input">First train time (Military time)</label>
+                      <input type="text" class="form-control-sm" id="first-train-input">
+                    </div>
+                    <div class="form-group">
+                      <label for="frequency-input">Frequency (Minutes)</label>
+                      <input type="number" class="form-control-sm" id="frequency-input">
+                    </div>
+                  </form>
+                  <button type="button" id="add-train" class="btn btn-dark">Sumbit</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  
+      <!--Train added modal-->
+      <div class="modal" id="train-added-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Schedule update</h5>
+              <button type="button" class="submit" data-dismiss="modal" aria-label="Submit">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Your train has been added.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="submit-modal-button" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
