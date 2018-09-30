@@ -1,15 +1,19 @@
 body{
     margin-bottom: 20px;
-
+    background-image: url(https://www.amtrak.com/content/dam/projects/dotcom/english/public/images/heros/Station_NewHaven_HeroBanner.jpg/_jcr_content/renditions/cq5dam.web.2125.1195.jpeg);
+    
+    
 }
 
 .jumbotron{
     background-color: lightgray;
     text-align: center;
+    font-family: 'Arima Madurai', cursive;
 }
 
 #train-table{
     background-color: grey;
+    font-family: 'Arima Madurai', cursive;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th{
@@ -18,6 +22,7 @@ body{
 
 .table-heading{
     font-size: larger;
+    font-family: 'Arima Madurai', cursive;
   }
   
   #add-train-card{
@@ -28,10 +33,20 @@ body{
   #add-train{
     background-color: lightgrey;
     border: none;
+    font-family: 'Arima Madurai', cursive;
   }
   
   #add-train:hover{
     background-color: lightgrey;
   }
+
+  h2{
+    font-family: 'Arima Madurai', cursive;
+  }
   
+  p{
+      font-family: 'Arima Madurai', cursive;
+      font-size:  24px;
+    
+  }
   

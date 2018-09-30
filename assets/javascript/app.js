@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Initialize Firebase
     var config = {
@@ -25,7 +25,7 @@ $(document).ready(function() {
     var timeRemainder;
     var minutesTilTrain;
     var nextTrain;
-    
+
     var database = firebase.database();
 
     // Functions
@@ -66,13 +66,18 @@ $(document).ready(function() {
         nextTrain = moment().add(minutesTilTrain, "minutes");
         nextTrainFormat = moment(nextTrain).format("hh:mm");
 
-        database.ref().push({
-            name: trainName,
-            destination: trainDestination,
-            firstTrain: firstTrainTime,
-            frequency: trainFrequency,
 
-        });
+        if (trainName != "" && trainDestination != "" && firstTrainTime != "" && trainFrequency != "") {
+            database.ref().push({
+                name: trainName,
+                destination: trainDestination,
+                firstTrain: firstTrainTime,
+                frequency: trainFrequency,
+
+            });
+        } else {
+            $("#message").text("Please enter text in all fields");
+        }
     });
 
     // Create Firebase event for adding train to the database and a row in the html when user adds an entry
